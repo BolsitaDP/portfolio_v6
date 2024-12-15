@@ -48,8 +48,10 @@ const Navbar = () => {
             </li>
           );
         })}
-        {!scrolled && <ToggleDarkMode />}
-        {!scrolled && <Languaje />}
+        <div className="nav-options">
+          {!scrolled && <ToggleDarkMode />}
+          {!scrolled && <Languaje />}
+        </div>
       </ul>
     </nav>
   );

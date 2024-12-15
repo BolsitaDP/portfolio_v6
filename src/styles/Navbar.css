@@ -19,7 +19,7 @@
   bottom: 2%;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
-  width: 80%;
+  width: max-content;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 20px;
@@ -57,5 +57,14 @@
   color: var(--theme);
 }
 
+.nav-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 767px) {
+  .nav-options {
+    flex-direction: column;
+  }
 }

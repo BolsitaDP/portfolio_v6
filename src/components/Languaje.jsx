@@ -16,7 +16,7 @@ const Languaje = () => {
   };
 
   return (
-    <div>
+    <div className="divLanguaje">
       {/* Botón para alternar idiomas */}
       <button className="languajeSwitcher" onClick={toggleLanguage}>
         {i18n.language === "es" ? (
