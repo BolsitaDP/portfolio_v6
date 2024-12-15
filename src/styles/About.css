@@ -1,0 +1,123 @@
+/* Contenedor principal */
+.about {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--background);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Encabezado */
+.about-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Espacio entre el texto y la imagen */
+  z-index: 2;
+  position: relative;
+  padding: 30px;
+  background: var(--white);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Permite que se ajuste en pantallas más pequeñas */
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-title {
+  font-size: 3.5rem;
+  color: var(--black);
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-description {
+  font-size: 1.4rem;
+  color: var(--black);
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.about-info {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* Botones */
+.about-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  color: var(--white) !important;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  color: var(--white) !important;
+  border: none;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+}
+
+/* Imagen de fondo */
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para pantallas grandes */
+@media (min-width: 768px) {
+  .about-header {
+    flex-direction: row; /* En computadoras, el texto y la imagen están en fila */
+  }
+  .about-image img {
+    max-width: 600px; /* Limitar tamaño de imagen en pantallas grandes */
+  }
+}
+
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+  .about-header {
+    flex-direction: column; /* En móviles, el texto y la imagen se apilan */
+    padding: 20px;
+  }
+  .about-title {
+    font-size: 2.5rem;
+  }
+  .about-description,
+  .about-info {
+    font-size: 1.2rem;
+  }
+}

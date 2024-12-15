@@ -1,0 +1,15 @@
+.languajeSwitcher {
+  border: none;
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  top: 10px;
+}
+
+.languajeSwitcher > img {
+  width: 20px;
+}

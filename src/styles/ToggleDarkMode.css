@@ -1,0 +1,14 @@
+.btnDarkMode {
+  background-color: var(--contrast);
+  outline: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--theme);
+  position: absolute;
+  right: 10px;
+}

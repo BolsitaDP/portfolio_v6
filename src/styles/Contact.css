@@ -1,0 +1,115 @@
+/* Contenedor principal */
+.contact {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--background);
+}
+
+.contact-header {
+  margin-bottom: 40px;
+}
+
+.contact-title {
+  font-size: 3.5rem;
+  color: var(--contrast);
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.contact-description {
+  font-size: 1.2rem;
+  color: var(--contrast);
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Estilo para la información de contacto */
+.contact-info {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-item {
+  margin-bottom: 30px;
+}
+
+.info-item h2 {
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.info-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-item li {
+  margin: 10px 0;
+}
+
+.info-item a {
+  font-size: 1.2rem;
+  color: var(--theme);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid var(--white);
+}
+
+.info-item a:hover {
+  border-bottom: 1px solid var(--theme);
+}
+
+/* Estilo para el footer */
+.contact-footer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.contact-footer h2 {
+  font-size: 2rem;
+  color: var(--contrast);
+}
+
+.contact-footer p {
+  font-size: 1.2rem;
+  color: var(--contrast);
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+  .contact-title {
+    font-size: 4rem;
+  }
+
+  .contact-description {
+    font-size: 1.3rem;
+  }
+
+  .info-item h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+  .contact-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-description {
+    font-size: 1.1rem;
+  }
+
+  .info-item h2 {
+    font-size: 2rem;
+  }
+
+  .info-item a {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,124 @@
+/* Contenedor principal */
+.home {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Encabezado */
+.home-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Espacio entre el texto y la imagen */
+  z-index: 2;
+  position: relative;
+  padding: 30px;
+  background: var(--white);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Permite que se ajuste en pantallas más pequeñas */
+}
+
+.home-text {
+  max-width: 500px; /* Limita el tamaño del texto */
+}
+
+.home-title {
+  font-size: 3.5rem;
+  color: var(--black);
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.home-subtitle {
+  font-size: 1.4rem;
+  color: var(--subtheme);
+  margin: 10px 0 20px;
+  font-weight: 500;
+}
+
+/* Botones */
+.home-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background-color: var(--theme) !important;
+  color: var(--white) !important;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background-color: var(--black) !important;
+  color: #fff;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #565e64;
+  transform: translateY(-3px);
+}
+
+/* Imagen de fondo */
+.home-image img {
+  max-width: 70%;
+  height: auto;
+  mask-image: linear-gradient(black 85%, transparent);
+  cursor: pointer;
+  filter: drop-shadow(5px 5px 5px var(--black));
+}
+.home-image img:hover {
+  scale: 1.05;
+}
+.home-image img:active {
+  scale: 0.95;
+}
+
+/* Estilo para pantallas grandes */
+@media (min-width: 768px) {
+  .home-header {
+    flex-direction: row; /* En computadoras, el texto y la imagen están en fila */
+  }
+  .home-image img {
+    max-width: 300px; /* Limitar tamaño de imagen en pantallas grandes */
+  }
+}
+
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+  .home-header {
+    flex-direction: column; /* En móviles, el texto y la imagen se apilan */
+    padding: 20px;
+  }
+  .home-title {
+    font-size: 2.5rem;
+  }
+  .home-subtitle {
+    font-size: 1.2rem;
+  }
+}
